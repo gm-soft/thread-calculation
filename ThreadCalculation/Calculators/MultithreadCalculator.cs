@@ -38,7 +38,7 @@ namespace ThreadCalculation.Calculators
             return _sum;
         }
         
-        private int[][] Split ()
+        private IReadOnlyCollection<IReadOnlyCollection<int>> Split ()
         {
             var i = 0;
             var splits = from item in Source

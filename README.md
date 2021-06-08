@@ -1,18 +1,37 @@
 # thread-calculation
 
+## How to run
+
+`dotnet run -c Release`
+
+## Legends
+
+- size   : Value of the 'size' parameter
+- Mean   : Arithmetic mean of all measurements
+- Error  : Half of 99.9% confidence interval
+- StdDev : Standard deviation of all measurements
+- 1 us   : 1 Microsecond (0.000001 sec)
+
 ## MBP 13 M1
+
+BenchmarkDotNet=v0.13.0, OS=macOS Big Sur 11.4 (20F71) [Darwin 20.5.0]
+Apple M1 2.40GHz, 1 CPU, 8 logical and 8 physical cores
+.NET SDK=5.0.300
+
+- [Host]     : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
+- DefaultJob : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
 
 |      Method |    size |        Mean |     Error |    StdDev |
 |------------ |-------- |------------:|----------:|----------:|
-|      Simple |   10000 |    174.1 us |   0.97 us |   0.81 us |
-|    Parallel |   10000 |    347.3 us |   2.70 us |   2.39 us |
-| Multithread |   10000 |  1,269.9 us |  25.26 us |  28.08 us |
-|      Simple |  100000 |  2,017.2 us |  13.19 us |  11.02 us |
-|    Parallel |  100000 |  2,538.8 us |  23.60 us |  22.07 us |
-| Multithread |  100000 |  5,163.5 us |  14.72 us |  13.05 us |
-|      Simple | 1000000 | 18,018.0 us |  22.06 us |  20.63 us |
-|    Parallel | 1000000 | 19,839.1 us | 109.00 us | 101.96 us |
-| Multithread | 1000000 | 37,024.5 us | 385.58 us | 360.68 us |
+|      Simple |   10000 |    224.0 us |   1.26 us |   1.18 us |
+|    Parallel |   10000 |    349.9 us |   1.48 us |   1.39 us |
+| Multithread |   10000 |  1,227.5 us |   5.59 us |   4.95 us |
+|      Simple |  100000 |  1,993.4 us |   9.85 us |   9.22 us |
+|    Parallel |  100000 |  2,679.3 us |  24.74 us |  23.14 us |
+| Multithread |  100000 |  4,390.3 us |   7.57 us |   7.08 us |
+|      Simple | 1000000 | 17,923.0 us |  30.13 us |  28.19 us |
+|    Parallel | 1000000 | 25,092.2 us |  93.11 us |  87.09 us |
+| Multithread | 1000000 | 46,259.4 us | 840.53 us | 825.52 us |
 
 ## MBP 13 i5 2019
 
