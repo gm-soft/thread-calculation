@@ -53,3 +53,24 @@ Intel Core i5-8257U CPU 1.40GHz (Coffee Lake), 1 CPU, 8 logical and 4 physical c
 |      Simple | 1000000 | 17,872.2 us |  51.68 us |  45.81 us |
 |    Parallel | 1000000 | 20,525.2 us | 285.38 us | 252.98 us |
 | Multithread | 1000000 | 38,215.0 us | 659.93 us | 759.97 us |
+
+## MBP 13 Mid 2017 (without touch bar)
+
+BenchmarkDotNet=v0.13.0, OS=macOS Catalina 10.15.1 (19B77a) [Darwin 19.0.0]
+Intel Core i5-7360U CPU 2.30GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cores
+.NET SDK=5.0.203
+  [Host]     : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
+  DefaultJob : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
+
+
+|      Method |    size |        Mean |     Error |    StdDev |
+|------------ |-------- |------------:|----------:|----------:|
+|      Simple |   10000 |    164.0 us |   3.19 us |   2.66 us |
+|    Parallel |   10000 |    245.4 us |   4.85 us |  11.98 us |
+| Multithread |   10000 |    642.2 us |   5.91 us |   5.24 us |
+|      Simple |  100000 |  1,728.6 us |   6.40 us |   5.34 us |
+|    Parallel |  100000 |  2,269.2 us |  34.43 us |  32.20 us |
+| Multithread |  100000 |  3,969.0 us |  41.38 us |  38.71 us |
+|      Simple | 1000000 | 18,139.8 us | 149.14 us | 132.21 us |
+|    Parallel | 1000000 | 20,803.8 us | 410.20 us | 718.42 us |
+| Multithread | 1000000 | 39,365.5 us | 769.70 us | 719.98 us |
