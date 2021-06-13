@@ -84,14 +84,14 @@ Intel Core i7-10510U CPU 1.80GHz, 1 CPU, 8 logical and 4 physical cores
   DefaultJob : .NET 5.0.5 (5.0.521.16609), X64 RyuJIT
 
 
-|      Method |    size |        Mean |     Error |    StdDev |      Median |
-|------------ |-------- |------------:|----------:|----------:|------------:|
-|      Simple |   10000 |    242.2 us |   4.75 us |   6.01 us |    239.6 us |
-|    Parallel |   10000 |    201.1 us |   3.52 us |   3.12 us |    200.3 us |
-| Multithread |   10000 |  1,230.1 us |  10.94 us |   9.69 us |  1,229.0 us |
-|      Simple |  100000 |  1,926.5 us |  64.15 us | 187.12 us |  1,807.4 us |
-|    Parallel |  100000 |  1,565.3 us |   6.87 us |   5.73 us |  1,566.0 us |
-| Multithread |  100000 |  2,819.3 us |  54.52 us |  58.33 us |  2,793.8 us |
-|      Simple | 1000000 | 18,172.6 us |  83.17 us |  69.45 us | 18,167.2 us |
-|    Parallel | 1000000 | 15,270.2 us | 302.45 us | 252.56 us | 15,201.7 us |
-| Multithread | 1000000 | 19,428.5 us | 382.75 us | 798.95 us | 19,370.8 us |
+|      Method |    size |        Mean |       Error |      StdDev |
+|------------ |-------- |------------:|------------:|------------:|
+|      Simple |   10000 |    170.1 us |     3.36 us |     7.10 us |
+|    Parallel |   10000 |    183.2 us |     1.77 us |     1.65 us |
+| Multithread |   10000 |  1,102.6 us |    15.39 us |    12.85 us |
+|      Simple |  100000 |  1,764.7 us |    32.48 us |    25.36 us |
+|    Parallel |  100000 |  1,615.3 us |     9.62 us |     8.53 us |
+| Multithread |  100000 |  2,617.6 us |    51.92 us |    40.54 us |
+|      Simple | 1000000 | 25,584.5 us | 1,454.79 us | 4,266.65 us |
+|    Parallel | 1000000 | 15,261.5 us |   285.04 us |   649.18 us |
+| Multithread | 1000000 | 17,710.3 us |   352.98 us |   627.42 us |
