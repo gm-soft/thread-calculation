@@ -17,21 +17,20 @@
 BenchmarkDotNet=v0.13.0, OS=macOS Big Sur 11.4 (20F71) [Darwin 20.5.0]
 Apple M1 2.40GHz, 1 CPU, 8 logical and 8 physical cores
 .NET SDK=5.0.300
-
 - [Host]     : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
 - DefaultJob : .NET 5.0.6 (5.0.621.22011), X64 RyuJIT
 
 |      Method |    size |        Mean |     Error |    StdDev |
 |------------ |-------- |------------:|----------:|----------:|
-|      Simple |   10000 |    224.0 us |   1.26 us |   1.18 us |
-|    Parallel |   10000 |    349.9 us |   1.48 us |   1.39 us |
-| Multithread |   10000 |  1,227.5 us |   5.59 us |   4.95 us |
-|      Simple |  100000 |  1,993.4 us |   9.85 us |   9.22 us |
-|    Parallel |  100000 |  2,679.3 us |  24.74 us |  23.14 us |
-| Multithread |  100000 |  4,390.3 us |   7.57 us |   7.08 us |
-|      Simple | 1000000 | 17,923.0 us |  30.13 us |  28.19 us |
-|    Parallel | 1000000 | 25,092.2 us |  93.11 us |  87.09 us |
-| Multithread | 1000000 | 46,259.4 us | 840.53 us | 825.52 us |
+|      Simple |   10000 |    212.3 us |   1.30 us |   1.22 us |
+|    Parallel |   10000 |    226.0 us |   1.92 us |   1.80 us |
+| Multithread |   10000 |  1,028.2 us |   9.79 us |   9.16 us |
+|      Simple |  100000 |  2,234.0 us |  12.43 us |  11.62 us |
+|    Parallel |  100000 |  1,671.0 us |   8.77 us |   8.20 us |
+| Multithread |  100000 |  2,316.6 us |  12.74 us |  11.92 us |
+|      Simple | 1000000 | 20,983.8 us | 136.05 us | 120.61 us |
+|    Parallel | 1000000 | 13,357.5 us |  19.21 us |  17.03 us |
+| Multithread | 1000000 | 15,824.2 us | 113.57 us | 100.68 us |
 
 ## MBP 13 i5 2019
 
