@@ -42,17 +42,16 @@ Intel Core i5-8257U CPU 1.40GHz (Coffee Lake), 1 CPU, 8 logical and 4 physical c
 - [Host]     : .NET 5.0.4 (5.0.421.11614), X64 RyuJIT
 - DefaultJob : .NET 5.0.4 (5.0.421.11614), X64 RyuJIT
 
-|      Method |    size |        Mean |     Error |    StdDev |
 |------------ |-------- |------------:|----------:|----------:|
-|      Simple |   10000 |    173.6 us |   1.21 us |   1.07 us |
-|    Parallel |   10000 |    338.2 us |   6.73 us |  19.51 us |
-| Multithread |   10000 |    824.1 us |   3.23 us |   2.86 us |
-|      Simple |  100000 |  1,815.2 us |  12.83 us |  12.00 us |
-|    Parallel |  100000 |  2,306.2 us |  10.20 us |   9.54 us |
-| Multithread |  100000 |  4,356.6 us |  20.17 us |  17.88 us |
-|      Simple | 1000000 | 17,872.2 us |  51.68 us |  45.81 us |
-|    Parallel | 1000000 | 20,525.2 us | 285.38 us | 252.98 us |
-| Multithread | 1000000 | 38,215.0 us | 659.93 us | 759.97 us |
+|      Simple |   10000 |    175.2 us |   0.76 us |   0.72 us |
+|    Parallel |   10000 |    190.4 us |   3.73 us |   5.23 us |
+| Multithread |   10000 |    621.5 us |   2.93 us |   2.45 us |
+|      Simple |  100000 |  1,892.7 us |  14.61 us |  13.66 us |
+|    Parallel |  100000 |  1,667.0 us |  12.10 us |  11.32 us |
+| Multithread |  100000 |  2,138.8 us |  16.26 us |  14.41 us |
+|      Simple | 1000000 | 18,190.2 us | 160.97 us | 150.57 us |
+|    Parallel | 1000000 | 15,332.3 us | 108.35 us |  96.05 us |
+| Multithread | 1000000 | 17,012.6 us | 328.78 us | 307.54 us |
 
 ## MBP 13 Mid 2017 (without touch bar)
 
