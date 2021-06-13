@@ -1,12 +1,14 @@
-﻿using BenchmarkDotNet.Running;
+﻿using System;
+using ThreadCalculation.Calculators;
 
 namespace ThreadCalculation
 {
-    public class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
+            Console.WriteLine(
+                new MultithreadCalculator(new RandomCollection(100_000).ToArray()).Sum());
         }
     }
 }

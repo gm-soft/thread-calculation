@@ -23,5 +23,7 @@ namespace ThreadCalculation
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
         public int Count => _source.Length;
+
+        public int[] ToArray() => _source;
     }
 }

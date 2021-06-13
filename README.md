@@ -74,3 +74,24 @@ Intel Core i5-7360U CPU 2.30GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cor
 |      Simple | 1000000 | 18,139.8 us | 149.14 us | 132.21 us |
 |    Parallel | 1000000 | 20,803.8 us | 410.20 us | 718.42 us |
 | Multithread | 1000000 | 39,365.5 us | 769.70 us | 719.98 us |
+
+# HP Elitebook 14 (840 G7)
+
+BenchmarkDotNet=v0.13.0, OS=Windows 10.0.19042.1052 (20H2/October2020Update)
+Intel Core i7-10510U CPU 1.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.202
+  [Host]     : .NET 5.0.5 (5.0.521.16609), X64 RyuJIT
+  DefaultJob : .NET 5.0.5 (5.0.521.16609), X64 RyuJIT
+
+
+|      Method |    size |        Mean |     Error |    StdDev |      Median |
+|------------ |-------- |------------:|----------:|----------:|------------:|
+|      Simple |   10000 |    242.2 us |   4.75 us |   6.01 us |    239.6 us |
+|    Parallel |   10000 |    201.1 us |   3.52 us |   3.12 us |    200.3 us |
+| Multithread |   10000 |  1,230.1 us |  10.94 us |   9.69 us |  1,229.0 us |
+|      Simple |  100000 |  1,926.5 us |  64.15 us | 187.12 us |  1,807.4 us |
+|    Parallel |  100000 |  1,565.3 us |   6.87 us |   5.73 us |  1,566.0 us |
+| Multithread |  100000 |  2,819.3 us |  54.52 us |  58.33 us |  2,793.8 us |
+|      Simple | 1000000 | 18,172.6 us |  83.17 us |  69.45 us | 18,167.2 us |
+|    Parallel | 1000000 | 15,270.2 us | 302.45 us | 252.56 us | 15,201.7 us |
+| Multithread | 1000000 | 19,428.5 us | 382.75 us | 798.95 us | 19,370.8 us |

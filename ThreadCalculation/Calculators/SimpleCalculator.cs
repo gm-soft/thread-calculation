@@ -5,9 +5,9 @@ namespace ThreadCalculation.Calculators
 {
     public class SimpleCalculator : ICalculator
     {
-        protected readonly IReadOnlyCollection<int> Source;
+        protected readonly int[] Source;
 
-        public SimpleCalculator(IReadOnlyCollection<int> source)
+        public SimpleCalculator(int[] source)
         {
             Source = source;
         }

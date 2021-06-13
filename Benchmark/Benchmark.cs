@@ -1,7 +1,8 @@
 using BenchmarkDotNet.Attributes;
+using ThreadCalculation;
 using ThreadCalculation.Calculators;
 
-namespace ThreadCalculation
+namespace Benchmark
 {
     public class Benchmark
     {
@@ -11,7 +12,7 @@ namespace ThreadCalculation
         [Arguments(1_000_000)]
         public int Simple(int size)
         {
-            return new SimpleCalculator(new RandomCollection(size)).Sum();
+            return new SimpleCalculator(new RandomCollection(size).ToArray()).Sum();
         }
         
         [Benchmark]
@@ -20,7 +21,7 @@ namespace ThreadCalculation
         [Arguments(1_000_000)]
         public int Parallel(int size)
         {
-            return new ParallelSumCalculator(new RandomCollection(size)).Sum();
+            return new ParallelSumCalculator(new RandomCollection(size).ToArray()).Sum();
         }
         
         [Benchmark]
@@ -29,7 +30,7 @@ namespace ThreadCalculation
         [Arguments(1_000_000)]
         public int Multithread(int size)
         {
-            return new MultithreadCalculator(new RandomCollection(size)).Sum();
+            return new MultithreadCalculator(new RandomCollection(size).ToArray()).Sum();
         }
     }
 }

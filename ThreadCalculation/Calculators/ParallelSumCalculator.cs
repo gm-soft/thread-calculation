@@ -5,7 +5,7 @@ namespace ThreadCalculation.Calculators
 {
     public class ParallelSumCalculator : SimpleCalculator
     {
-        public ParallelSumCalculator(IReadOnlyCollection<int> source)
+        public ParallelSumCalculator(int[] source)
             : base(source)
         {
         }

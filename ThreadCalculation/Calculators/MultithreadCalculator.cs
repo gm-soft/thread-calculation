@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ThreadCalculation.Calculators
 {
@@ -11,7 +12,7 @@ namespace ThreadCalculation.Calculators
         private readonly object _sumLocker = new ();
         private readonly int _numberThreads;
         
-        public MultithreadCalculator(IReadOnlyCollection<int> source)
+        public MultithreadCalculator(int[] source)
             : base(source)
         {
             _numberThreads = Environment.ProcessorCount;
@@ -20,35 +21,29 @@ namespace ThreadCalculation.Calculators
         public override int Sum()
         {
             _sum = 0;
-            var parts = Split();
-            var threadList = new List<Thread>();
+
+            int chunkSize = Source.Length / _numberThreads;
+            var threads = new List<Thread>(_numberThreads);
+
+            for (int i = 0; i < _numberThreads; i++)
+            {
+                var chunkArray = new int[chunkSize];
+                Array.Copy(
+                    sourceArray: Source,
+                    sourceIndex: i * chunkSize,
+                    destinationArray: chunkArray,
+                    destinationIndex: 0,
+                    length: chunkSize);
+
+                var thread = new Thread(new ParameterizedThreadStart(SumArrayInThread));
+                thread.Start(chunkArray);
+                threads.Add(thread);
+            }
             
-            foreach (var part in parts)
-            {
-                var thread = new Thread(SumArrayInThread);
-                threadList.Add(thread);
-                thread.Start(part);
-            }
-
-            foreach (var thread in threadList)
-            {
-                thread.Join();
-            }
-
+            threads.ForEach(x => x.Join());
             return _sum;
         }
-        
-        private IReadOnlyCollection<IReadOnlyCollection<int>> Split ()
-        {
-            var i = 0;
-            var splits = from item in Source
-                group item by i++ % _numberThreads
-                into part
-                select part.ToArray();
-            return splits.ToArray();
-        }
 
-        
         private void SumArrayInThread(object array)
         {
             var sum = ((int[])array).Sum();
