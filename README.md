@@ -17,8 +17,8 @@
 BenchmarkDotNet=v0.13.2, OS=macOS 13.0.1 (22A400) [Darwin 22.1.0]
 Apple M1, 1 CPU, 8 logical and 8 physical cores
 .NET SDK=7.0.100
-  [Host]     : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
-  DefaultJob : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
+- [Host]     : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
+- DefaultJob : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
 
 
 |      Method |    size |        Mean |     Error |    StdDev |
