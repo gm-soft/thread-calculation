@@ -12,6 +12,27 @@
 - StdDev : Standard deviation of all measurements
 - 1 us   : 1 Microsecond (0.000001 sec)
 
+## MBP 14 M3 Max (.net 8 ARM)
+
+BenchmarkDotNet=v0.13.2, OS=macOS 14.3 (23D56) [Darwin 23.3.0]
+Apple M3 Max, 1 CPU, 14 logical and 14 physical cores
+.NET SDK=8.0.101
+  [Host]     : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
+  DefaultJob : .NET 7.0.0 (7.0.22.51805), Arm64 RyuJIT AdvSIMD
+
+
+|      Method |    size |        Mean |     Error |    StdDev |
+|------------ |-------- |------------:|----------:|----------:|
+|      Simple |   10000 |    37.50 us |  0.139 us |  0.116 us |
+|    Parallel |   10000 |    53.57 us |  0.936 us |  0.875 us |
+| Multithread |   10000 |   557.83 us | 11.110 us | 12.795 us |
+|      Simple |  100000 |   537.69 us |  4.615 us |  4.316 us |
+|    Parallel |  100000 |   532.00 us |  2.527 us |  2.363 us |
+| Multithread |  100000 | 1,111.08 us |  6.503 us |  6.083 us |
+|      Simple | 1000000 | 5,552.16 us | 21.938 us | 19.447 us |
+|    Parallel | 1000000 | 5,612.27 us | 65.829 us | 61.576 us |
+| Multithread | 1000000 | 5,325.02 us | 71.546 us | 66.924 us |
+
 ## MBP 13 M1 (.net 7 ARM)
 
 BenchmarkDotNet=v0.13.2, OS=macOS 13.0.1 (22A400) [Darwin 22.1.0]
